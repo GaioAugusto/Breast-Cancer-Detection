@@ -11,10 +11,6 @@ This project implements **BreastNet**, a custom Convolutional Neural Network (CN
 - [Model: BreastNet](#model-breastnet)
 - [Image Reconstruction & Visualization](#image-reconstruction--visualization)
 - [Results](#results)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
 
 ---
 
@@ -54,7 +50,7 @@ BreastNet is a deep CNN tailored for binary classification of image patches.
 
 <!-- Optional image: Model architecture diagram -->
 
-![Model Architecture](images/breastnet_architecture.png)
+![Model Architecture](images/modelArch.png)
 
 ---
 
@@ -68,11 +64,7 @@ A key feature of this project is reconstructing full breast tissue images from p
 
 <!-- Optional image: Original tissue sample -->
 
-![Original Tissue Sample](images/original_patch_layout.png)
-
-<!-- Optional image: Reconstructed image with overlay -->
-
-![Cancer Detection Overlay](images/reconstructed_detection_overlay.png)
+![Cancer Detection Overlay](images/reconstructedImage.png)
 
 This visualization helps pathologists localize cancer more efficiently.
 
@@ -93,6 +85,6 @@ This visualization helps pathologists localize cancer more efficiently.
 
 <!-- Optional image: Confusion matrix -->
 
-![Confusion Matrix](images/confusion_matrix.png)
+![Confusion Matrix](images/confusionMatrix.png)
 
 ---
