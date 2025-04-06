@@ -5,6 +5,7 @@ This project implements **BreastNet**, a custom Convolutional Neural Network (CN
 ---
 
 ## 📌 Table of Contents
+
 - [Motivation](#motivation)
 - [Dataset](#dataset)
 - [Model: BreastNet](#model-breastnet)
@@ -31,6 +32,7 @@ We use the **Breast Histopathology Images** dataset from Kaggle, consisting of o
 - **0 = IDC-negative (non-cancerous)**
 
 ### Preprocessing
+
 - Normalization and conversion to 3×50×50 RGB tensors.
 - Addressed class imbalance via undersampling.
 - Data augmentations: rotations, flips, color jitter, erasing, and cropping.
@@ -43,6 +45,7 @@ We use the **Breast Histopathology Images** dataset from Kaggle, consisting of o
 BreastNet is a deep CNN tailored for binary classification of image patches.
 
 **Architecture Highlights:**
+
 - 6 Convolutional Layers (32 → 512 filters)
 - Batch Normalization + SiLU activation
 - MaxPooling after first 4 layers
@@ -50,6 +53,7 @@ BreastNet is a deep CNN tailored for binary classification of image patches.
 - Optimizer: Adam | Loss: CrossEntropy | LR: 0.002
 
 <!-- Optional image: Model architecture diagram -->
+
 ![Model Architecture](images/breastnet_architecture.png)
 
 ---
@@ -63,9 +67,11 @@ A key feature of this project is reconstructing full breast tissue images from p
 3. **Color Overlay** — Detected cancerous patches are highlighted with a visual overlay.
 
 <!-- Optional image: Original tissue sample -->
+
 ![Original Tissue Sample](images/original_patch_layout.png)
 
 <!-- Optional image: Reconstructed image with overlay -->
+
 ![Cancer Detection Overlay](images/reconstructed_detection_overlay.png)
 
 This visualization helps pathologists localize cancer more efficiently.
@@ -74,18 +80,19 @@ This visualization helps pathologists localize cancer more efficiently.
 
 ## 📊 Results
 
-| Metric        | Value     |
-|---------------|-----------|
-| **Accuracy**  | 85.00%    |
-| **Recall**    | 86%       |
-| **Specificity** | 84%     |
-| **F1-Score**  | 85%       |
-| **RMSE**      | 0.39      |
+| Metric          | Value  |
+| --------------- | ------ |
+| **Accuracy**    | 85.00% |
+| **Recall**      | 86%    |
+| **Specificity** | 84%    |
+| **F1-Score**    | 85%    |
+| **RMSE**        | 0.39   |
 
 - **High Recall** minimizes false negatives — critical in cancer diagnosis.
 - **Safety-First Bias**: Tendency to over-flag (false positives) is acceptable in clinical settings.
 
 <!-- Optional image: Confusion matrix -->
+
 ![Confusion Matrix](images/confusion_matrix.png)
 
 ---
